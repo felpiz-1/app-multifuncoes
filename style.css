@@ -68,6 +68,18 @@ main{
     align-items: center;
 }
 
+.card {
+  display: none;
+}
+
+.ativo {
+  min-height: 120px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+
 footer{
     width: 100%;
     height: auto;
