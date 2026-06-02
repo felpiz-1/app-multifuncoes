@@ -3,16 +3,28 @@
     border: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-hanken);
 }
 
 :root {
-    --cor-primaria: #003366; 
-    --cor-secundaria: #f0f4f8; 
-    --cor-fundo: #f9f9f9; 
-    --cor-texto: #000000; 
-    --cor-destaque: #e8f0fe; 
-    --cor-texto-secundario: #333333; 
+  --background: #0b1326;
+  --on-surface: #dae2fd;
+  --on-surface-variant: #bdc8d1;
+  --surface-container-highest: #2d3449;
+  --surface-container: #171f33;
+  --surface-container-low: #131b2e;
+  
+  --primary-container: #38bdf8;
+  --primary: #8ed5ff;
+  --on-primary: #00354a;
+  --btn-hover-bg: #59c8f9;
+  
+  --outline-variant: #3e484f;
+  
+  --margin-desktop: 48px;
+  --gutter: 16px;
+  
+  --font-hanken: 'Hanken Grotesk', sans-serif;
 }
 
 body{
@@ -20,7 +32,8 @@ body{
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(245, 234, 255);
+    background-color: var(--background);
+    font-family: var(--font-hanken);
 }
 
 header{
@@ -29,7 +42,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(160, 43, 255);
+    background-color: var(--surface-container-highest);
 }
 
 div{
@@ -47,17 +60,19 @@ aside{
     align-items: center;
     gap: 50px;
     padding: 20px 10px;
-    background-color: rgb(186, 101, 255);
+    background-color: var(--surface-container);
+    border-right: 1px solid var(--outline-variant);
 }
 
-aside button{
+.btn{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     border-radius: 10px;
     height: 8%;
-    
+    text-decoration: none;
+    color: var(--on-surface);
 }
 
 main{
@@ -73,12 +88,21 @@ main{
 }
 
 .ativo {
-  min-height: 120px;
-  border: 1px solid blue;
+  width: 90%;
+  height: 90%;
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container-low);
   border-radius: 8px;
   padding: 24px;
+  color: var(--on-surface);
 }
 
+#calculo-imc form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
 footer{
     width: 100%;
@@ -88,5 +112,5 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(170, 67, 255);
+    background-color: var(--surface-container-highest);
 }
