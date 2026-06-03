@@ -36,40 +36,27 @@ function puxarValores(){
         const genero = document.querySelector('input[name=genero]:checked').id;
 
        let resultadoIMC = calcularIMC(peso, altura, genero)
-       console.log(resultadoIMC)
+       classificarIMC(resultadoIMC, genero)
     });
 }
 
     function calcularIMC(peso, altura){
      let imc = peso / altura ** 2;
 
-     return(imc)
+     return(imc.toFixed(1))
+
+}
+
+function classificarIMC(imc, genero){
+    if(genero = masculino){
+        if(imc < 18.5){
+            return("abaixo do peso")
+        }
+        else if(imc < 24.9){
+            return("Peso Normal")
+        }
+    }
 }
 
 puxarValores()
 
-// const elementoImc = {
-//     // genero: document.querySelectorAll('#genero'),
-//     form: document.getElementById('form')
-// }
-
-// let generoMasc = document.getElementById('masclino')
-// let generoFem = document.getElementById('feminino')
-
-// generoMasc.addEventListener('submit', (e) => {
-//         e.preventDefault();
-
-//         calcularIMC(generoMasc.value, generoFem.value)
-//      })
-
-//      calcularIMC(genero){
-//         if(genero)
-//      }
-// elementoImc.genero.addEventListener('click', (evento) => {
-//     puxarGenero
-// })
-
-// elementoImc.form.addEventListener('submit', (evento) => {
-//     evento.preventDefault()
-//     console.log(elementoImc.genero.value)
-// })
