@@ -21,17 +21,55 @@ buttons.addEventListener('click', (evento) =>{
 
 })
 
-const elementoImc = {
-    genero: document.querySelectorAll('.genero'),
-    form: document.getElementById('form')
+const form = document.getElementById('form')
+const button = document.getElementById('buttonIMC')
+// const genero = document.querySelectorAll(".genero")
+
+function puxarValores(){
+    form.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+        
+    })
+    button.addEventListener('click', (evento) =>{
+        const altura = document.getElementById('altura').value/100
+        const peso = document.getElementById('peso').value
+        const genero = document.querySelector('input[name=genero]:checked').id;
+
+       let resultadoIMC = calcularIMC(peso, altura, genero)
+       console.log(resultadoIMC)
+    });
 }
-     console.log(elementoImc.genero)
 
-elementoImc.genero.addEventListener('click', (evento) => {
-    puxarGenero
-})
+    function calcularIMC(peso, altura){
+     let imc = peso / altura ** 2;
 
-elementoImc.form.addEventListener('submit', (evento) => {
-    evento.preventDefault()
-    console.log(elementoImc.genero.value)
-})
+     return(imc)
+}
+
+puxarValores()
+
+// const elementoImc = {
+//     // genero: document.querySelectorAll('#genero'),
+//     form: document.getElementById('form')
+// }
+
+// let generoMasc = document.getElementById('masclino')
+// let generoFem = document.getElementById('feminino')
+
+// generoMasc.addEventListener('submit', (e) => {
+//         e.preventDefault();
+
+//         calcularIMC(generoMasc.value, generoFem.value)
+//      })
+
+//      calcularIMC(genero){
+//         if(genero)
+//      }
+// elementoImc.genero.addEventListener('click', (evento) => {
+//     puxarGenero
+// })
+
+// elementoImc.form.addEventListener('submit', (evento) => {
+//     evento.preventDefault()
+//     console.log(elementoImc.genero.value)
+// })
