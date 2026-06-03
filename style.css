@@ -96,7 +96,7 @@ footer{
     border: 1px solid transparent;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     background-color: var(--fundo-botao-padrao);
-    color: var(--texto-secundario);
+    color: var(--texto-principal);
     font-family: var(--fonte-principal);
     font-size: 12px;
     line-height: 16px;
@@ -140,7 +140,18 @@ footer{
 
 /* conficuração section do imc */
 
-
+#calculo-imc{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    height: 90%;
+    border: 1px solid var(--borda-divisoria);
+    background-color: var(--fundo-cards);
+    border-radius: 8px;
+    padding: 24px;
+    color: var(--texto-principal);
+}
 
 #calculo-imc .resultado{
     width: 90%;
@@ -151,7 +162,28 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: column;
+    color: var(--texto-secundario);
     gap: 5px;
+}
+
+#calculo-imc  button{
+
+    text-align: left;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: var(--fundo-botao-padrao);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;font-weight: 600;
+    cursor: pointer;
+}
+
+#calculo-imc button:active{
+    background-color: var(--cor-destaque);  
+    color: var(--texto-botao-ativo);
 }
 
 #calculo-imc h1{
