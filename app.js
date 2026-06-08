@@ -36,26 +36,54 @@ function puxarValores(){
         const genero = document.querySelector('input[name=genero]:checked').id;
 
        let resultadoIMC = calcularIMC(peso, altura, genero)
-       classificarIMC(resultadoIMC, genero)
+       let classificacaoImc = classificarIMC(resultadoIMC, genero)
+       exibirImc(classificacaoImc, resultadoIMC)
     });
-}
 
+}
     function calcularIMC(peso, altura){
      let imc = peso / altura ** 2;
 
      return(imc.toFixed(1))
-
 }
 
 function classificarIMC(imc, genero){
     if(genero = masculino){
         if(imc < 18.5){
-            return("abaixo do peso")
+            return("Abaixo do peso")
         }
         else if(imc < 24.9){
             return("Peso Normal")
         }
+        if(imc < 29.9){
+            return("Sobrepeso")
+        }
+        if(imc >= 30.0){
+            return("obesidade")
+        }
     }
+    if(genero = feminino){
+        if(imc < 18.5){
+            return("Abaixo do peso")
+        }
+        else if(imc < 23.9){
+            return("Peso Normal")
+        }
+        if(imc < 28.9){
+            return("Sobrepeso")
+        }
+        if(imc >= 29.0){
+            return("obesidade")
+        }
+    }
+}
+
+function exibirImc(classificacaoImc, resultadoIMC){
+    const imc = document.getElementById("imc")
+    const tipoImc = document.getElementById("tipoImc")
+
+    imc.textContent = resultadoIMC
+    tipoImc.textContent = classificacaoImc
 }
 
 puxarValores()
