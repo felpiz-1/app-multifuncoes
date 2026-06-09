@@ -88,3 +88,33 @@ function exibirImc(classificacaoImc, resultadoIMC){
 
 puxarValores()
 
+const moeda1 = document.getElementById('moeda1')
+const moeda2 = document.getElementById('moeda2')
+const formMoedas = document.getElementById('formMoedas')
+const valorDigitado = document.getElementById('inserirmoeda1') 
+
+
+formMoedas.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+    consultarCep(moeda1.value, moeda2.value, valorDigitado.value)
+})
+
+
+    async function consultarCep(moeda1, moeda2, valorDigitado) {
+        const url = await (await fetch(`https://economia.awesomeapi.com.br/json/last/${moeda1}-${moeda2}`)).json()
+        let chaveMoeda = `${moeda1}${moeda2}`
+        let bid = url[chaveMoeda].bid;
+        let resultado = calcularValor(bid, valorDigitado)
+        exibirvalor(resultado)
+    }
+
+    function calcularValor(bid, valorDigitado){
+        let valor = bid * valorDigitado;
+        return(valor.toFixed(2))
+    }
+
+    function exibirvalor(resultado){
+        const valor = document.getElementById('valor')
+
+        valor.textContent = resultado
+    }
