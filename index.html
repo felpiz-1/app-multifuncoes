@@ -16,7 +16,7 @@
     <header>
         <h1>titulo</h1>
     </header>
-    <div>
+    <div class="container">
         <aside id="pai-buttons">
             <a class="btn" href="#cotacao-moedas" id="cotacao">Cotação</a>
             <a class="btn" href="#calculo-imc" id="Imc">Calcular Imc</a>
@@ -28,17 +28,20 @@
         <main>
             <section class="card" id="cotacao-moedas">
                  <h1>Contação-Moedas</h1>   
+                 
             </section>
             <section class="card" id="calculo-imc">
                 <h1>Calculo imc</h1>
                 <form action="" id="form">
-                    <div>
-                        <label for="masculino">Masculino</label>
-                        <input class="genero" type="radio" id="masculino" value="masculino" name="genero" checked>
-                    </div>
-                    <div>
-                        <label for="feminino">Feminino</label>
-                        <input class="genero" type="radio" id="feminino" value="feminino" name="genero" checked>
+                    <div class="box-genero">
+                        <div class="genero-individual">
+                            <label for="masculino">Masculino</label>
+                            <input class="genero" type="radio" id="masculino" value="masculino" name="genero" checked>
+                        </div>
+                        <div class="genero-individual">
+                            <label for="feminino">Feminino</label>
+                            <input class="genero" type="radio" id="feminino" value="feminino" name="genero" checked>
+                        </div>
                     </div>
 
                     <label for="altura">Altura</label>

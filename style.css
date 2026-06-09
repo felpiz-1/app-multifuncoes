@@ -47,7 +47,7 @@ header{
     background-color: var(--fundo-topo-rodape);
 }    
 
-div{
+.container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -140,7 +140,7 @@ footer{
 
 /* conficuração section do imc */
 
-#calculo-imc{
+/* #calculo-imc{
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -151,24 +151,50 @@ footer{
     border-radius: 8px;
     padding: 24px;
     color: var(--texto-principal);
-}
+} */
 
 #calculo-imc .resultado{
-    width: 90%;
+    width: 100%;
     height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }    
 
 #calculo-imc form{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: var(--texto-secundario);
-    gap: 5px;
+    gap: 10px;
+}
+
+/* #calculo-imc form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.box-genero{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.genero-individual{
+    display: flex;
+    justify-content: center;
 }
 
 #calculo-imc  button{
-
-    text-align: left;
+    width: 50%;
+    text-align: center;
     padding: 12px 16px;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -190,23 +216,19 @@ footer{
     border-bottom: 1px solid var(--borda-divisoria);
     display: flex;
     justify-content: center;
+    margin-bottom: 24px;
 }
 
 #peso{
+    width: 50%;
     padding: 5px;
     border-radius: 15px;
     border: 1px solid var(--borda-divisoria);
 }
 
 #altura{
+    width: 50%;
     padding: 5px;
     border-radius: 15px;
     border: 2px solid var(--borda-divisoria);
-}
-
-.resultado{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
 }
