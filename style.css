@@ -172,12 +172,6 @@ footer{
     gap: 10px;
 }
 
-/* #calculo-imc form div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .box-genero{
     width: 100%; 
@@ -231,4 +225,65 @@ footer{
     padding: 5px;
     border-radius: 15px;
     border: 2px solid var(--borda-divisoria);
+}
+
+/* Configuração section cotação */
+
+#formMoedas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+.inputsCotação{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputsCotação input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+.resultadoMoedas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+#formMoedas button{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--fundo-botao-padrao);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;font-weight: 600;
+    cursor: pointer;
+}
+
+#formMoedas button:active{
+    background-color: var(--cor-destaque);  
+    color: var(--texto-botao-ativo);
+}
+
+#formMoedas select{
+    padding: 5px;
+    border-radius: 15px;
 }

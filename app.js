@@ -42,9 +42,14 @@ function puxarValores(){
 
 }
     function calcularIMC(peso, altura){
-     let imc = peso / altura ** 2;
+        if(altura == 0){
+            return("altura invalida")
+        }
+        else{
+            let imc = peso / altura ** 2;
+            return(imc.toFixed(1))
+        }
 
-     return(imc.toFixed(1))
 }
 
 function classificarIMC(imc, genero){
@@ -116,5 +121,5 @@ formMoedas.addEventListener('submit', (evento) => {
     function exibirvalor(resultado){
         const valor = document.getElementById('valor')
 
-        valor.textContent = resultado
+        valor.textContent = `R$${resultado}`
     }
