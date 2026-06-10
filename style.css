@@ -138,20 +138,6 @@ footer{
     color: var(--texto-principal);
 }
 
-/* conficuração section do imc */
-
-/* #calculo-imc{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 90%;
-    height: 90%;
-    border: 1px solid var(--borda-divisoria);
-    background-color: var(--fundo-cards);
-    border-radius: 8px;
-    padding: 24px;
-    color: var(--texto-principal);
-} */
 
 #calculo-imc .resultado{
     width: 100%;
@@ -286,4 +272,31 @@ footer{
 #formMoedas select{
     padding: 5px;
     border-radius: 15px;
+}
+
+#cotacao-moedas h1{
+    border-bottom: 1px solid var(--borda-divisoria);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  footer {
+    flex-direction: row;
+  }
+}
+
+/* Telas médias/Desktop (Medium - md) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .pai-buttons {
+    width: 288px; 
+    border-bottom: none;
+    border-right: 1px solid var(--borda-divisoria);
+    overflow-y: auto;
+  }
 }
