@@ -37,6 +37,7 @@ function puxarValores(){
 
        let resultadoIMC = calcularIMC(peso, altura, genero)
        let classificacaoImc = classificarIMC(resultadoIMC, genero)
+       console.log(genero)
        exibirImc(classificacaoImc, resultadoIMC)
     });
 
@@ -53,11 +54,11 @@ function puxarValores(){
 }
 
 function classificarIMC(imc, genero){
-    if(genero = masculino){
+    if(genero == "masculino"){
         if(imc < 18.5){
             return("Abaixo do peso")
         }
-        else if(imc < 24.9){
+        if(imc < 24.9){
             return("Peso Normal")
         }
         if(imc < 29.9){
@@ -67,11 +68,11 @@ function classificarIMC(imc, genero){
             return("obesidade")
         }
     }
-    if(genero = feminino){
+    if(genero == "feminino"){
         if(imc < 18.5){
             return("Abaixo do peso")
         }
-        else if(imc < 23.9){
+        if(imc < 23.9){
             return("Peso Normal")
         }
         if(imc < 28.9){
