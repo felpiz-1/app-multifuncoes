@@ -124,3 +124,20 @@ formMoedas.addEventListener('submit', (evento) => {
 
         valor.textContent = `R$${resultado}`
     }
+
+    const claroescuro = document.getElementById('claroEscuro')
+    const body = document.querySelector('body')
+    const header = document.querySelector('header')
+    const aside = document.querySelector('aside')
+    const footer = document.querySelector('footer')
+
+    function alterarModo() {
+    claroescuro.addEventListener ('click', ()=>{
+    body.classList.toggle("bodyClaro");
+    header.classList.toggle("headerClaro");
+    aside.classList.toggle("asideClaro");
+    footer.classList.toggle("footerClaro");
+    });
+}
+
+alterarModo()
