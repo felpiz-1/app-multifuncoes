@@ -24,9 +24,37 @@
   
   /* Bordas e Linhas */
   --borda-divisoria: #3e484f;
+
+  /* Cores de Fundo */
+  --claro-background-color: #f7f9fb;       /* Cor de fundo geral do app */
+  --claro-fundo-topo-rodape: #e6e8ea;      /* Baseado no cinza claro do seu rodapé */
+  --claro-fundo-barra-lateral: #ffffff;    /* Fundo branco limpo para o aside */
+  --claro-fundo-cards: #ffffff;            /* Fundo branco para os blocos de conteúdo */
   
+  /* Cores de Texto */
+  --claro-texto-principal: #191c1e;        /* Texto escuro principal de alta legibilidade */
+  --claro-texto-secundario: #45464d;       /* Texto secundário/suave (on-surface-variant) */
+  --claro-texto-botao-ativo: #ffffff;      /* Cor do texto dentro dos botões */
+  
+  /* Cores dos Botões e Ações */
+  --claro-fundo-botao-padrao: #38bdf8;     /* O azul clássico que estava no seu HTML */
+  --claro-fundo-botao-hover: #0ea5e9;      /* O tom de azul mais escuro para o efeito hover */
+  --claro-cor-destaque: #0d9488;           /* Tom verde-água (teal) para realces do sistema */
+  
+  /* Bordas e Linhas */
+  --claro-borda-divisoria: #e2e8f0;        /* Cor sutil para as bordas dos cards e linhas */  
+
   /* Fontes */
   --fonte-principal: 'Hanken Grotesk', sans-serif;
+}
+
+.bodyClaro{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--claro-background-colorbackground-color);
+    font-family: var(--fonte-principal);    
 }
 
 body{
@@ -36,6 +64,15 @@ body{
     flex-direction: column;
     background-color: var(--background-color);
     font-family: var(--fonte-principal);
+}
+
+.headerClaro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--claro-fundo-topo-rodape);    
 }
 
 header{
@@ -54,6 +91,19 @@ header{
     flex-direction: column;
     gap: 5%;
 }    
+
+.asideClaro{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 10px;
+    background-color: var(--claro-fundo-barra-lateral);
+    border-bottom: 1px solid var(--claro-borda-divisoria);
+}
 
 aside{
     width: 100%;
