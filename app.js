@@ -159,11 +159,31 @@ const valorC = document.getElementById('valor3')
 formRegra.addEventListener('submit', (evento) =>{
     evento.preventDefault()
 
-    filtrarValores(valorA.value, valorB.value, valorC.value)
+    let resultadoX = filtrarValores(valorA.value, valorB.value, valorC.value)
+    inserirResultadoX(resultadoX)
 })
 
 function filtrarValores(valorA, valorB, valorC){
-    console.log(valorA, valorB, valorC)
+    if(valorA == 0 && valorB == 0 && valorC ==0){
+        return("valores invalidos")
+    }
+    else if (valorA == 0){
+        return("valor 1 não pode ser zero")
+    }
+    else if (valorB == 0){
+        return("valor 2 não pode ser zero")
+    }
+    else if (valorC == 0){
+        return("valor 3 não pode ser zero")
+    }
+    else{
+        let resultado = valorB * valorC / valorA
+        return(resultado.toFixed(2))
+    }
 }
 
-filtrarValores()
+function inserirResultadoX(resultado){
+    const resultadodisplay = document.getElementById('resultadoRegra')
+
+    resultadodisplay.textContent = resultado
+}
