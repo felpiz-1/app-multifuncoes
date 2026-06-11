@@ -37,7 +37,6 @@ function puxarValores(){
 
        let resultadoIMC = calcularIMC(peso, altura, genero)
        let classificacaoImc = classificarIMC(resultadoIMC, genero)
-       console.log(genero)
        exibirImc(classificacaoImc, resultadoIMC)
     });
 

@@ -28,13 +28,17 @@
         </aside>
         <main>
             <section class="card" id="cotacao-moedas">
-                <h1>Contação-Moedas</h1>   
+                <h1>Cotação-Moedas</h1>   
 
                 <form action="" id="formMoedas">
                     <div class="inputsCotação">
                         <select name="moeda1" id="moeda1">
                             <option value="BRL">BLR</option>
                             <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="BTC">BTC</option>
+                            <option value="CNY">CNY</option>
+                            <option value="GBP">GBP</option>
                         </select>
                         <input type="text" id="inserirmoeda1">
                     </div>
@@ -42,6 +46,9 @@
                         <select name="moeda2" id="moeda2">
                             <option value="BRL">BLR</option>
                             <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CNY">CNY</option>
+                            <option value="GBP">GBP</option>
                         </select>
                             <div class="resultadoMoedas">
                                 <p id="valor"></p>
@@ -59,7 +66,7 @@
                     <div class="box-genero">
                         <div class="genero-individual">
                             <label for="masculino">Masculino</label>
-                            <input class="genero" type="radio" id="masculino" value="masculino" name="genero">
+                            <input class="genero" type="radio" id="masculino" value="masculino" name="genero" checked>
                         </div>
                         <div class="genero-individual">
                             <label for="feminino">Feminino</label>
@@ -92,6 +99,21 @@
             </section>
             <section class="card" id="calculo-tres">
                 <h1>Calculo Proporção</h1>
+
+                <form id="formRegra" action="">
+                    <div class="caixaRegra">
+                        <input id="valor1" type="number">
+                        <p>esta para</p>
+                        <input id="valor2" type="number">
+                    </div>
+                    <p>assim como</p>
+                    <div class="caixaRegra">
+                        <input id="valor3" type="number">
+                        <p>esta para</p>
+                        <div class="resultadoMoedas"></div>
+                    </div>
+                    <button>Calcular</button>
+                </form>
             </section>
         </main>
     </div>
