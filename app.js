@@ -17,9 +17,26 @@ buttons.addEventListener('click', (evento) =>{
         }
         secaoId.classList.remove('card')
         secaoId.classList.add("ativo")
-        }
-
+    }
+    
 })
+
+const claroescuro = document.getElementById('claroEscuro')
+const body = document.querySelector('body')
+const header = document.querySelector('header')
+const aside = document.querySelector('aside')
+const footer = document.querySelector('footer')
+
+function alterarModo() {
+claroescuro.addEventListener ('click', ()=>{
+body.classList.toggle("bodyClaro");
+header.classList.toggle("headerClaro");
+aside.classList.toggle("asideClaro");
+footer.classList.toggle("footerClaro");
+});
+}
+
+alterarModo()
 
 const form = document.getElementById('form')
 const button = document.getElementById('buttonIMC')
@@ -134,19 +151,19 @@ formMoedas.addEventListener('submit', (evento) => {
         valor.textContent = `R$${resultado}`
     }
 
-    const claroescuro = document.getElementById('claroEscuro')
-    const body = document.querySelector('body')
-    const header = document.querySelector('header')
-    const aside = document.querySelector('aside')
-    const footer = document.querySelector('footer')
+const formRegra = document.getElementById('formRegra')
+const valorA = document.getElementById('valor1')
+const valorB = document.getElementById('valor2')
+const valorC = document.getElementById('valor3')
 
-    function alterarModo() {
-    claroescuro.addEventListener ('click', ()=>{
-    body.classList.toggle("bodyClaro");
-    header.classList.toggle("headerClaro");
-    aside.classList.toggle("asideClaro");
-    footer.classList.toggle("footerClaro");
-    });
+formRegra.addEventListener('submit', (evento) =>{
+    evento.preventDefault()
+
+    filtrarValores(valorA.value, valorB.value, valorC.value)
+})
+
+function filtrarValores(valorA, valorB, valorC){
+    console.log(valorA, valorB, valorC)
 }
 
-alterarModo()
+filtrarValores()
