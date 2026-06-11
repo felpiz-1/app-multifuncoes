@@ -42,9 +42,19 @@ function puxarValores(){
 
 }
     function calcularIMC(peso, altura){
-        if(altura == 0){
+        
+        if(altura == 0 && peso == 0){
+            return("valores invalidos")
+        }
+        
+        else if( peso == 0){
+            return("peso invalido")
+        }
+        
+        else if(altura == 0){
             return("altura invalida")
         }
+
         else{
             let imc = peso / altura ** 2;
             return(imc.toFixed(1))
