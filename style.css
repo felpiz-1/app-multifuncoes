@@ -374,6 +374,218 @@ footer{
     border: 1px solid var(--borda-divisoria);
 }
 
+/* conversor temperatura */
+
+#formTemperatura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+#formTemperatura button{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--fundo-botao-padrao);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;font-weight: 600;
+    cursor: pointer;
+}
+
+#formTemperatura button:active{
+    background-color: var(--cor-destaque);  
+    color: var(--texto-botao-ativo);
+}
+
+#formTemperatura input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+#formTemperatura select{
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.resultadoTemperatura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+.inputsTemperatura{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputsTemperatura input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+/* conversor de massa */
+
+
+#formMassa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+#formMassa button{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--fundo-botao-padrao);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;font-weight: 600;
+    cursor: pointer;
+}
+
+#formMassa button:active{
+    background-color: var(--cor-destaque);  
+    color: var(--texto-botao-ativo);
+}
+
+#formMassa input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+#formMassa select{
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.resultadoMassa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+.inputsMassa{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputsMassa input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+/* conversor velocidade */
+
+#formVelocidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+
+#formVelocidade button{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--fundo-botao-padrao);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;font-weight: 600;
+    cursor: pointer;
+}
+
+#formVelocidade button:active{
+    background-color: var(--cor-destaque);  
+    color: var(--texto-botao-ativo);
+}
+
+#formVelocidade input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+#formVelocidade select{
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.resultadoVelocidade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+.inputsVelocidade{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputsVelocidade input{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+    border: 1px solid var(--borda-divisoria);
+}
+
+
 img{
     width: 50px;
     height: auto;

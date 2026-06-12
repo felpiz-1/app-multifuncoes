@@ -202,11 +202,11 @@ formTemperatura.addEventListener('submit', (evento) => {
 function calcularTemperatura(classe, temperatura){
     if(classe == "c"){
         let resultado = temperatura * 1.8 + 32
-        return(resultado.toFixed(2))
+        return(resultado.toFixed(1))
     }
     else if (classe == "f"){
         let resultado = temperatura - 32 / 1.8
-        return(resultado.toFixed(2))
+        return(resultado.toFixed(1))
     }
 }
 
@@ -251,11 +251,11 @@ const classeMassa = document.getElementById('classeMassa')
 formMassa.addEventListener('submit', (evento) => {
     evento.preventDefault()
 
-    let resultadoMassa = calcularVelocidade(classeMassa.value, massa.value)
-    adicionarVelocidade(resultadoMassa)
+    let resultadoMassa = calcularMassa(classeMassa.value, massa.value)
+    adicionarMassa(resultadoMassa)
 })
 
-function calcularVelocidade(classe, massa){
+function calcularMassa(classe, massa){
     if(classe == "kg"){
         let resultado = massa *  2.20462
         return(resultado.toFixed(1))
@@ -266,7 +266,7 @@ function calcularVelocidade(classe, massa){
     }
 }
 
-function adicionarVelocidade(resultadoMassa){
+function adicionarMassa(resultadoMassa){
     const caixaResultado = document.getElementById('resultadoMassa')
 
     caixaResultado.textContent = resultadoMassa
