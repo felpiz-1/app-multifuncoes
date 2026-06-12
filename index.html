@@ -19,12 +19,12 @@
     </header>
     <div class="container">
         <aside id="pai-buttons">
-            <a class="btn" href="#cotacao-moedas" id="cotacao">Cotação</a>
-            <a class="btn" href="#calculo-imc" id="Imc">Calcular Imc</a>
-            <a class="btn" href="#conversor-tempo" id="temperatura">Conversor de temp</a>
-            <a class="btn" href="#conversor-velocidade" id="velocidade">Conversor de vel</a>
-            <a class="btn" href="#conversor-massa" id="massa">Conversor de massa</a>
-            <a class="btn" href="#calculo-tres" id="multiplicação">calculo regra de tres</a>
+            <a class="btn" href="#cotacao-moedas">Cotação</a>
+            <a class="btn" href="#calculo-imc">Calculadora de Imc</a>
+            <a class="btn" href="#conversor-temperatura">Conversor de temperatura</a>
+            <a class="btn" href="#conversor-velocidade">Conversor de velocidade</a>
+            <a class="btn" href="#conversor-massa">Conversor de massa</a>
+            <a class="btn" href="#calculo-tres">Calculadora Proporção</a>
         </aside>
         <main>
             <section class="card" id="cotacao-moedas">
@@ -81,7 +81,7 @@
                     </div>
 
                     <label for="altura">Altura</label>
-                    <input type="number" min="1" id="altura" placeholder="Digite sua altura">
+                    <input type="number" min="1" id="altura" placeholder="Digite sua altura em cm">
 
                     <label for="peso">Peso</label>
                     <input type="number" id="peso" step="0.1" placeholder="Digite seu peso" >
@@ -94,11 +94,55 @@
 
                 </div>
             </section>
-            <section class="card" id="conversor-tempo">
-                <h1 class="tiruloSection">conversor-tempo</h1>
+            <section class="card" id="conversor-temperatura">
+                <h1 class="tiruloSection">conversor-temperatura</h1>
+                
+                <form action="" id="formTemperatura">
+                    <div>
+                        <select name="classe" id="classe">
+                            <option value="c">C°</option>
+                            <option value="f">F°</option>
+                        </select>
+                        <input id="temperatura" type="number" step="0.1">
+                    </div>
+
+                    <div>
+                        <select name="classeResultado" id="classeResultado">
+                            <option value="f">F°</option>
+                            <option value="c">C°</option>
+                        </select>
+                        <div>
+                            <p id="resultadoTemperatura"></p>
+                        </div>
+                    </div>
+                    <button>Converter</button>
+                </form>
+
             </section>
             <section class="card" id="conversor-velocidade">
                 <h1 class="tiruloSection">conversor-velocidade</h1>
+
+                <form action="" id="formVelocidade">
+                    <div>
+                        <select name="classeVelocidade" id="classeVelocidade">
+                            <option value="km/h">km/h</option>
+                            <option value="mph">mph</option>
+                        </select>
+                        <input id="velocidade" type="number">
+                    </div>
+
+                    <div>
+                        <select name="" id="">
+                            <option value="mph">mph</option>
+                            <option value="km/h">km/h</option>
+                        </select>
+                        <div>
+                            <p id="resultadoVelocidade"></p>
+                        </div>
+                    </div>
+                    <button>Converter</button>
+                </form>
+
             </section>
             <section class="card" id="conversor-massa">
                 <h1 class="tiruloSection">conversor-massa</h1>
@@ -132,9 +176,7 @@
         </main>
     </div>
     <footer>
-        <h1>E-mail:</h1>
-        <h1>E-mail:</h1>
-        <h1>E-mail:</h1>
+
     </footer>
 </body>
 </html>

@@ -215,3 +215,31 @@ function adicionarTemperatura(resultadoTemperatura){
 
     caixaResultado.textContent = resultadoTemperatura
 }
+
+const formVelocidade = document.getElementById('formVelocidade')
+const velocidade = document.getElementById('velocidade')
+const classeVelocidade = document.getElementById('classeVelocidade')
+
+formVelocidade.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    let resultadoVelocidade = calcularVelocidade(classeVelocidade.value, velocidade.value)
+    adicionarVelocidade(resultadoVelocidade)
+})
+
+function calcularVelocidade(classe, velocidade){
+    if(classe == "km/h"){
+        let resultado = velocidade *  0.621371
+        return(resultado.toFixed(0))
+    }
+    else if (classe == "mph"){
+        let resultado = velocidade /  0.621371
+        return(resultado.toFixed(0))
+    }
+}
+
+function adicionarVelocidade(resultadoVelocidade){
+    const caixaResultado = document.getElementById('resultadoVelocidade')
+
+    caixaResultado.textContent = resultadoVelocidade
+}
