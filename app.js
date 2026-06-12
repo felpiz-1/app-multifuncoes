@@ -243,3 +243,31 @@ function adicionarVelocidade(resultadoVelocidade){
 
     caixaResultado.textContent = resultadoVelocidade
 }
+
+const formMassa = document.getElementById('formMassa')
+const massa = document.getElementById('massa')
+const classeMassa = document.getElementById('classeMassa')
+
+formMassa.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    let resultadoMassa = calcularVelocidade(classeMassa.value, massa.value)
+    adicionarVelocidade(resultadoMassa)
+})
+
+function calcularVelocidade(classe, massa){
+    if(classe == "kg"){
+        let resultado = massa *  2.20462
+        return(resultado.toFixed(1))
+    }
+    else if (classe == "lbs"){
+        let resultado = massa /  2.20462
+        return(resultado.toFixed(1))
+    }
+}
+
+function adicionarVelocidade(resultadoMassa){
+    const caixaResultado = document.getElementById('resultadoMassa')
+
+    caixaResultado.textContent = resultadoMassa
+}
