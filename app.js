@@ -159,11 +159,11 @@ const valorC = document.getElementById('valor3')
 formRegra.addEventListener('submit', (evento) =>{
     evento.preventDefault()
 
-    let resultadoX = filtrarValores(valorA.value, valorB.value, valorC.value)
+    let resultadoX = calcularX(valorA.value, valorB.value, valorC.value)
     inserirResultadoX(resultadoX)
 })
 
-function filtrarValores(valorA, valorB, valorC){
+function calcularX(valorA, valorB, valorC){
     if(valorA == 0 && valorB == 0 && valorC ==0){
         return("valores invalidos")
     }
@@ -186,4 +186,32 @@ function inserirResultadoX(resultado){
     const resultadodisplay = document.getElementById('resultadoRegra')
 
     resultadodisplay.textContent = resultado
+}
+
+const formTemperatura = document.getElementById('formTemperatura')
+const temperatura = document.getElementById('temperatura')
+const classe = document.getElementById('classe')
+
+formTemperatura.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    let resultadoTemperatura = calcularTemperatura(classe.value, temperatura.value)
+    adicionarTemperatura(resultadoTemperatura)
+})
+
+function calcularTemperatura(classe, temperatura){
+    if(classe == "c"){
+        let resultado = temperatura * 1.8 + 32
+        return(resultado.toFixed(2))
+    }
+    else if (classe == "f"){
+        let resultado = temperatura - 32 / 1.8
+        return(resultado.toFixed(2))
+    }
+}
+
+function adicionarTemperatura(resultadoTemperatura){
+    const caixaResultado = document.getElementById('resultadoTemperatura')
+
+    caixaResultado.textContent = resultadoTemperatura
 }
